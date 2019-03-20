@@ -35,8 +35,8 @@ QVTerminal::QVTerminal(QWidget *parent)
 
     _layout = new QVTLayout();
 
-    _pasteAction = new QAction("Paste");
-    _pasteAction->setShortcut(QKeySequence("Ctrl+V"));
+    _pasteAction = new QAction(QString("Paste"));
+    _pasteAction->setShortcut(QKeySequence(QString("Ctrl+V")));
     connect(_pasteAction, &QAction::triggered, this, &QVTerminal::paste);
     addAction(_pasteAction);
 }
